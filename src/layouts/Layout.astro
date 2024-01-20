@@ -1,0 +1,75 @@
+---
+import Header from '../components/Header.astro'
+
+interface Props {
+	description: string;
+	title: string;
+}
+
+const { description,title } = Astro.props;
+---
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		
+		<title>{title}</title>
+	</head>
+	<body>
+	<Header/>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: dark;
+		
+	}
+	html {
+		font-family: 'Roboto', sans-serif;
+		background: #111e31;
+	}
+	
+	p {
+		color:rgba(255, 255, 255,0.9);
+		line-height: 1.1;
+		margin-bottom: 1em;
+		font-size: 0.9em;
+		letter-spacing: 0.5px;
+		font-weight: 50;
+		
+		
+	}
+	@keyframes brillo {
+		0% {
+			background-position: -200px;
+
+		}
+		100% {
+			background-position: 10px;
+		}
+	}
+	p strong {
+  color: #000000;
+  font-weight: 800;
+  background-image: linear-gradient(65deg, #ffffff, #ffffff, #000000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255,0.4);
+  animation: brillo 1s infinite alternate-reverse;
+}
+#header-nav.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+	
+</style>
+

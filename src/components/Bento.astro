@@ -1,0 +1,73 @@
+---
+import BentoItem from './BentoItem.astro';
+---
+<section
+    class=`
+        w-full max-w-[1400px]
+        grid grid-cols-10 auto-rows-[25rem] gap-4
+        mx-auto px-20`
+    >
+    <BentoItem 
+        class="col-span-10 md:col-span-4"  
+        title="ANDORRA: EL CENIT DE LOS ESLAND"
+        >
+        <div
+        slot="image"
+        class=" absolute top-0 left-0 w-full 
+            h-full group-hover:scale-110 transit-scale duration-1000
+            ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover
+            bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/mountain.png');"
+      >
+      </div>
+        <p slot="content" class="text-pretty">
+            Este año, el momento de la alfombra azul será sustituido 
+            y mejorado, gracias a los increíbles paisajes andorranos
+            , por una <strong>alfombra blanca en plena nieve</strong>, situada en las 
+            <strong>pistas de esquí de Andorra.</strong>
+        </p>
+    </BentoItem>
+    <BentoItem 
+        class="col-span-10 md:col-span-6" 
+        title="LA ALFOMBRA BLANCA" 
+        subtitle="16 de febrero"
+        ><div
+        slot="image"
+        class=" absolute top-0 left-0 w-full 
+            h-full group-hover:scale-110 transit-scale duration-1000
+            ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover
+            bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/Andorra.jpeg');"
+        
+        />
+        
+        
+    </BentoItem>
+    <BentoItem 
+        class="col-span-10 md:col-span-6" 
+        title="LA GALA"/ subtitle="3 de junio"
+        ><div
+        slot="image"
+        class=" absolute top-0 left-0 w-full 
+            h-full group-hover:scale-110 transit-scale duration-1000
+            ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover
+            bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/grefg.png');">
+    </div>
+    </BentoItem> 
+        <BentoItem 
+        class="col-span-10 md:col-span-4" 
+        title="DISFRUTA DEL REDDIT DE LA COMUNIDAD "
+        ><div
+        slot="image"
+        class=" absolute top-0 left-0 w-full 
+            h-full group-hover:scale-110 transit-scale duration-1000
+            ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover
+            bg-no-repeat bg-blue-950 -z-10"
+      style="background-image: url('/laptop.png');">
+    </div>
+        
+        </BentoItem>
+
+</section>
+    
