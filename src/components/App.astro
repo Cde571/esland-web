@@ -1,22 +1,19 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
-import Video from '../components/Video.astro';
 import Intro from '../components/Intro.astro'
 import Bento from '../components/Bento.astro';
 import PreFooter from '../components/PreFooter.astro'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 
-import {getI18n} from '../i18n.js' 
-const {currentLocale = "es"}= Astro
-const i18n= getI18n(currentLocale)
+
 ---
 
 <Layout 
-	title="Premios ESLAND 2025 - Celebrando lo mejor del streaming y los creadores" 
-	description="Reunion de los mejores streamers de habla hispana, para coronar a los mejores">
-	<Video />
+	title="FINCA EN ALQUILER | ALQUILE SU FINCA" 
+	description="FINCAS PARA ALQUILAR EN CUALQUIER LUGAR">
+	<Header/>
 	<main>
 		<Intro/>
 		<Bento/>

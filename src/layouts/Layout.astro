@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro'
+import '@fontsource-variable/onest'
 
 interface Props {
 	description: string;
@@ -16,7 +17,7 @@ const { description,title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/finca.svg" />
 		
 		<title>{title}</title>
 	</head>
@@ -31,12 +32,12 @@ const { description,title } = Astro.props;
 		
 	}
 	html {
-		font-family: 'Roboto', sans-serif;
-		background: #111e31;
+		font-family: "onest variable", sans-serif;
+		background: #ffffff;
 	}
 	
 	p {
-		color:rgba(255, 255, 255,0.9);
+		color:rgba(0, 0, 0, 0.9);
 		line-height: 1.1;
 		margin-bottom: 1em;
 		font-size: 0.9em;
@@ -54,22 +55,61 @@ const { description,title } = Astro.props;
 			background-position: 10px;
 		}
 	}
-	p strong {
-  color: #000000;
+	p  {
+  color: #242424;
+  
   font-weight: 800;
-  background-image: linear-gradient(65deg, #ffffff, #ffffff, #000000);
+  background-image: linear-gradient(65deg, #000000, #ffffff, #000000);
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255,0.4);
-  animation: brillo 1s infinite alternate-reverse;
-}
-#header-nav.hidden {
-  transform: translateY(-100%);
-  transition: transform 0.5s ease-in-out;
+  line-height: 1.4;
 }
 
+  
 
+a{
+  text-decoration: none;
+}
+#header-dev{
+	color: #000000;
+	backdrop-filter: blur(5px);
+}
+#header-vip{
+	background-color: rgb(0, 0, 109);
+}
+#header-nav {
+	animation: blur linear both;
+	animation-range: 0 500px;
+	animation-timeline: scroll();
+}
 
+@keyframes blur {
+	to {
+		box-shadow: 
+			0px 5px 50px -5px rgba(255, 255, 255, 0.1),
+					
+			0px 5px 50px 1px rgba(255, 255, 255, 0.3);
+					
+			background: rgba(255, 255, 255, 0.3);
+					
+			backdrop-filter: blur(20px);
+	}
+}
+
+p strong{
+	color: #000000;
+	background-color: #000000;
+}
+#header-vue{
+	color: #110074;
+}
+#logo-vue{
+	width: 100px;
+	filter: white;
+}
+#logo-vue:hover{
+	filter: invert(100%);
 	
+	
+}
 </style>
 
